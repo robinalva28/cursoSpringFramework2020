@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bolsadeideas.springboot.web.app.models.Usuario;
 // setxkbmap -layout us
 
 //ruta del controlador
@@ -17,5 +19,22 @@ public class IndexController {
 		model.addAttribute("titulo", "Bienvenido a Spring");
 		return "index";
 	}
+	
+	@RequestMapping("/perfil")
+	public String perfil(Model model) {
+		//se crea una instancia del modelo Usuario
+		Usuario usuario = new Usuario();
+		usuario.setNombre("Robinson");
+		usuario.setApellido("Alvarez");
+		model.addAttribute("titulo", "Perfil del usuario: " + usuario.getNombre());
+		model.addAttribute("usuario", usuario);
+		//se llama a la vista perfil
+		return "perfil";
+	}
+	
+	
+	
+	
+	
 	
 }
