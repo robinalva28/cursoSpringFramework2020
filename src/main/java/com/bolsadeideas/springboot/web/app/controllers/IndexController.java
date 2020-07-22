@@ -26,11 +26,19 @@ public class IndexController {
 		Usuario usuario = new Usuario();
 		usuario.setNombre("Robinson");
 		usuario.setApellido("Alvarez");
-		model.addAttribute("titulo", "Perfil del usuario: " + usuario.getNombre());
+		//usuario.setEmail("email@correo.com");
+		model.addAttribute("titulo", "Perfil del usuario: " .concat(usuario.getNombre()));
 		model.addAttribute("usuario", usuario);
 		//se llama a la vista perfil
 		return "perfil";
 	}
+	
+	@GetMapping({"listar"})
+	public String listar(Model model) {
+		model.addAttribute("titulo", "Lista de usuarios");
+		return "index";
+	}
+	
 	
 	
 	
