@@ -9,6 +9,7 @@ import org.apache.tomcat.util.digester.ArrayStack;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bolsadeideas.springboot.web.app.models.Usuario;
@@ -40,16 +41,23 @@ public class IndexController {
 	}
 	
 	
-	@GetMapping({"/listar"})
+	@RequestMapping({"/listar"})
 	public String listar(Model model) {
-		//se crea una lista para mostrar en la vista
-		List<Usuario> usuarios = Arrays.asList(new Usuario("Robinson","Alvarez","correo@gmail.com"),
-						new Usuario("Pedro","Perez","pedro@gmail.com"),
-						new Usuario("Maria","Acacio","maria@gmail.com"),
-						new Usuario("Marcos","Alberca","marcos@gmail.com"));
 		
-		model.addAttribute("usuarios", usuarios);
+		
+		model.addAttribute("titulo", "Lista de usuarios");
 		return "listar";
+	}
+	
+	@ModelAttribute("usuarios")
+	public List<Usuario> poblarUsuarios() {
+		//se crea una lista para mostrar en la vista
+				List<Usuario> usuarios = Arrays.asList(new Usuario("Robinson","Alvarez","correo@gmail.com"),
+								new Usuario("Pedro","Perez","pedro@gmail.com"),
+								new Usuario("Maria","Acacantara","maria@gmail.com"),
+								new Usuario("Marcos","Alberca","marcos@gmail.com"));
+				
+				return usuarios;
 	}
 	
 	
