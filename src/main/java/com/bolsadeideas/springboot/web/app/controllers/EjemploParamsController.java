@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/params")
 public class EjemploParamsController {
 
-	@GetMapping("/index")
+	@GetMapping({"/index" , "/"})
 	public String index(Model model) {
 		
+		model.addAttribute("titulo", "Enviar parametros del Request HTTP GET - URL");
 		return "params/index";
 	}
 	
 	@RequestMapping("/string")
 	public String param(@RequestParam(name="texto", required=false, defaultValue = "Texto por defecto") String texto, Model model) {
-		model.addAttribute("titulo", "recibir parametros del Request HTTP GET - URL");
+		model.addAttribute("titulo", "Recibir parametros del Request HTTP GET - URL");
 		model.addAttribute("resultado", "El texto de la peticion es : " + texto);
 		return "params/ver";
 	}
