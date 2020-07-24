@@ -1,12 +1,17 @@
 package com.bolsadeideas.springboot.web.app.controllers;
 
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.tomcat.util.digester.ArrayStack;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bolsadeideas.springboot.web.app.models.Usuario;
-// setxkbmap -layout us
 
 //ruta del controlador
 @Controller
@@ -20,29 +25,32 @@ public class IndexController {
 		return "index";
 	}
 	
+	
 	@RequestMapping("/perfil")
 	public String perfil(Model model) {
 		//se crea una instancia del modelo Usuario
 		Usuario usuario = new Usuario();
 		usuario.setNombre("Robinson");
 		usuario.setApellido("Alvarez");
-		//usuario.setEmail("email@correo.com");
+		
 		model.addAttribute("titulo", "Perfil del usuario: " .concat(usuario.getNombre()));
 		model.addAttribute("usuario", usuario);
 		//se llama a la vista perfil
 		return "perfil";
 	}
 	
-	@GetMapping({"listar"})
+	
+	@GetMapping({"/listar"})
 	public String listar(Model model) {
-		model.addAttribute("titulo", "Lista de usuarios");
-		return "index";
+		//se crea una lista para mostrar en la vista
+		List<Usuario> usuarios = Arrays.asList(new Usuario("Robinson","Alvarez","correo@gmail.com"),
+						new Usuario("Pedro","Perez","pedro@gmail.com"),
+						new Usuario("Maria","Acacio","maria@gmail.com"),
+						new Usuario("Marcos","Alberca","marcos@gmail.com"));
+		
+		model.addAttribute("usuarios", usuarios);
+		return "listar";
 	}
-	
-	
-	
-	
-	
 	
 	
 }
