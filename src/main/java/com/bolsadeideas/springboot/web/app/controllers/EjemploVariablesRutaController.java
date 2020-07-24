@@ -23,4 +23,13 @@ public class EjemploVariablesRutaController {
 
 		return "/variables/ver";
 	}
+	//PASAR VARIOS PARAMETROS CON @PathVariable
+	@GetMapping("/string/{texto}/{numero}")
+	public String variables(@PathVariable String texto, @PathVariable int numero, Model model) {
+		
+		model.addAttribute("titulo", "recibir varios parametros por path variable");
+		model.addAttribute("resultado", "el resultado recibido por @path variable");
+		
+		return "/variables/ver";
+	}
 }
