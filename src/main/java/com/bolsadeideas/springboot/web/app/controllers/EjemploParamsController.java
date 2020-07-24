@@ -26,7 +26,16 @@ public class EjemploParamsController {
 		return "params/ver";
 	}
 	
+	
 	@RequestMapping("/mix-params")
+	public String param(@RequestParam String saludo, @RequestParam(name="numero") int numero, Model model) {
+			
+		model.addAttribute("titulo", "Enviar varios parametros del Request HTTP GET - URL");
+		model.addAttribute("resultado", "El saludo es : '" + saludo + "' y el numero es '" + numero + "'");
+		return "params/ver";
+	}
+	//	CON HTTTPSERVLETREQUEST
+	@RequestMapping("/mix-params-http")
 	public String param(HttpServletRequest request, Model model) {
 		String saludo = request.getParameter("saludo");
 		int numero;
