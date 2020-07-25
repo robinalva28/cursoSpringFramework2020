@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.apache.tomcat.util.digester.ArrayStack;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +21,20 @@ import com.bolsadeideas.springboot.web.app.models.Usuario;
 @RequestMapping("/app")
 public class IndexController {
  
-	@GetMapping({"index" , "/" , "" , "/home"})
+	//INYECTAR TEXTO DESDE application.properties CON @VALUE
+	@Value("${controllers.indexcontroller.tituloindex}")
+	private String tituloIndex;
+	
+	@Value("${controllers.indexcontroller.tituloperfil}")
+	private String tituloPerfil;
+	
+	@Value("${controllers.indexcontroller.titulolistar}")
+	private String tituloListar;
+	
+	
+	@GetMapping({"index" , "/" , "" })
 	public String index(Model model) {
-		model.addAttribute("titulo", "Bienvenido a Spring");
+		model.addAttribute("titulo", tituloIndex);
 		return "index";
 	}
 	
@@ -34,7 +46,7 @@ public class IndexController {
 		usuario.setNombre("Robinson");
 		usuario.setApellido("Alvarez");
 		
-		model.addAttribute("titulo", "Perfil del usuario: " .concat(usuario.getNombre()));
+		model.addAttribute("titulo", tituloPerfil .concat(usuario.getNombre()));
 		model.addAttribute("usuario", usuario);
 		//se llama a la vista perfil
 		return "perfil";
@@ -45,7 +57,7 @@ public class IndexController {
 	public String listar(Model model) {
 		
 		
-		model.addAttribute("titulo", "Lista de usuarios");
+		model.addAttribute("titulo", tituloListar);
 		return "listar";
 	}
 	
