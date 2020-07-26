@@ -2734,3 +2734,18 @@ java.io.FileNotFoundException: /home/blopper/Escritorio/curso spring/.metadata/.
 2020-07-26 12:24:31,781 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-07-26 12:24:31,781 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/blopper/Escritorio/curso spring/workspace/spring-boot-di/src/test/resources
 2020-07-26 12:27:31,923 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-07-26 12:45:50,809 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-26 12:45:50,816 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-26 12:45:50,831 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-26 12:45:50,838 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-26 12:45:50,838 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/blopper/Escritorio/curso spring/workspace/spring-boot-di/src/test/resources
+2020-07-26 12:46:06,026 [Worker-6: Launching spring-boot-di - SpringBootDiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-26 12:46:06,031 [Worker-6: Launching spring-boot-di - SpringBootDiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-26 12:46:06,034 [Worker-6: Launching spring-boot-di - SpringBootDiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-26 12:46:06,043 [Worker-6: Launching spring-boot-di - SpringBootDiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-26 12:46:06,044 [Worker-6: Launching spring-boot-di - SpringBootDiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/blopper/Escritorio/curso spring/workspace/spring-boot-di/src/test/resources
+2020-07-26 12:46:29,295 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-26 12:46:29,296 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-26 12:46:29,297 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-26 12:46:29,301 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-26 12:46:29,301 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/blopper/Escritorio/curso spring/workspace/spring-boot-di/src/test/resources

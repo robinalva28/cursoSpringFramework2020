@@ -1,9 +1,12 @@
 package com.bolsadeideas.springboot.di.app.models.service;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MiServicio {
 	
 	public String operacion() {
-		return "Ejecutando un proceso";
+		return "Ejecutando un proceso importante";
 	}
 	
 }
