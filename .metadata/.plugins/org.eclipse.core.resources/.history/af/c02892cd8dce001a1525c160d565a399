@@ -1,0 +1,3 @@
+controllers.indexcontroller.tituloindex: Bienvenido a Spring desde properties
+controllers.indexcontroller.tituloperfil: Perfil del usuario: 
+controllers.indexcontroller.titulolistar: Lista de usuarios

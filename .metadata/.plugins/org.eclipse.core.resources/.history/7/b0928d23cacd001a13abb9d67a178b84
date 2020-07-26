@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+
+<div th:if="${usuarios.isEmpty()}" >La lista esta vacia</div>
+
+<table th:if="${!usuarios.size.isEmpty()}">
+<thead>
+<tr>
+<th>nombre</th>
+</tr>
+</thead>
+
+</table> 
+</body>
+</html>
